@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Плаксин</title>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    <script>
+        document.write("Описание акустики");
+        document.write("<br>");
+        function Akustika(type, usilitel, maxpower,korpus, DD, MM, YYYY) {
+
+            this.typet = type;
+            this.usilitela = usilitel;
+            this.maxpoweri = maxpower;
+            this.korpusa = korpus;
+            this.DDz = DD;
+            this.MMz = MM;
+            this.YYYYz = YYYY;
+           
+
+            }
+        Object.defineProperties(Akustika.prototype, {
+            type: {
+                get: function () {
+                    return this.typet
+                },
+                set: function (type1) {
+                    this.typet = type1;
+                }
+            },
+            usilitel: {
+                get: function () {
+                    return this.usilitela
+                },
+                set: function (usilitel1) {
+                    this.usilitela = usilitel1;
+                }
+            },
+            maxpower: {
+                get: function () {
+                    return this.maxpoweri
+                },
+                set: function (maxpower1) {
+                    this.maxpoweri = maxpower1;
+                }
+            },
+            korpus: {
+                get: function () {
+                    return this.korpusa
+                },
+                set: function (korpus1) {
+                    this.korpusa = korpus1;
+                }
+            },
+            DD: {
+                get: function() {
+                    return this.DDz;
+                },
+                set: function(DD1) {
+                    this.DDz = DD1;
+                }
+            },
+            MM: {
+                get: function() {
+                    return this.MMz;
+                },
+                set: function(MM1) {
+                    this.MMz = MM1;
+                }
+            },
+            YYYY: {
+                get: function() {
+                    return this.YYYYz;
+                },
+                set: function(YYYY1) {
+                    this.YYYYz = YYYY1;
+                }
+            }
+        });
+
+        function Info(obj) {
+            document.write("Тип: " + obj.type);
+            document.write("<br>");
+            document.write("Усилитель: " + obj.usilitel);
+            document.write("<br>");
+            document.write("Максимальная мощность: " + obj.maxpower);
+            document.write("<br>");
+            document.write("Материал корпуса: " + obj.korpus);
+            document.write("<br>");
+            document.write("Дата выхода на рынок: " + obj.DD + "." + obj.MM + "." + obj.YYYY);
+        }
+
+        var Pioneer = new Akustika("Портативная","2-х канальный","20 Вт","Пластик", 20,04,2023);
+        Info(Pioneer);
+
+    </script>
+</body>
+</html>

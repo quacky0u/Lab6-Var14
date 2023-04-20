@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Плаксин</title>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    <script>
+        document.write("Описание акустики");
+        document.write("<br>");
+
+        class Akustika {
+            constructor(type, usilitel, maxpower, korpus) {
+                this.typet = type;
+                this.usilitela = usilitel;
+                this.maxpoweri = maxpower;
+                this.korpusa = korpus;
+
+            }
+            get type() {
+                return this.typet;
+            }
+            set type(type1) {
+                this.typet = type1;
+            }
+            get usilitel() {
+                return this.usilitela;
+            }
+            set usilitel(usilitel1) {
+                this.usilitela = this.usilitel1;
+            }
+            get maxpower() {
+                return this.maxpoweri;
+            }
+            set maxpower(maxpower1) {
+                this.maxpoweri = maxpower1;
+            }
+            get korpus() {
+                return this.korpusa;
+            }
+            set korpus(korpus1) {
+                this.korpusa = korpus1;
+            }
+        }
+        function Info() {
+            document.write("Тип: " + Pioneer.type);
+            document.write("<br>");
+            document.write("Усилитель: " + Pioneer.usilitel);
+            document.write("<br>");
+            document.write("Максимальная мощность: " + Pioneer.maxpower);
+            document.write("<br>");
+            document.write("Материал корпуса: " + Pioneer.korpus);
+        }
+        
+
+        var Pioneer = new Akustika("Портативная", "2-х канальный", "20 Вт", "Пластик");
+        Info();
+
+    </script>
+</body>
+</html>

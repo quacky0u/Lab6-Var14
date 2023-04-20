@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Плаксин</title>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    <script>
+        document.write("Описание акустики");
+        document.write("<br>");
+
+        class Akustika {
+            constructor(type, usilitel, maxpower, korpus) {
+                this.typet = type;
+                this.usilitela = usilitel;
+                this.maxpoweri = maxpower;
+                this.korpusa = korpus;
+
+            }
+            get type() {
+                return this.typet;
+            }
+            set type(type1) {
+                this.typet = type1;
+            }
+            get usilitel() {
+                return this.usilitela;
+            }
+            set usilitel(usilitel1) {
+                this.typet = usilitel1;
+            }
+            get maxpower() {
+                return this.maxpoweri;
+            }
+            set maxpower(maxpower1) {
+                this.maxpoweri = maxpower1;
+            }
+            get korpus() {
+                return this.korpusa;
+            }
+            set korpus(korpus1) {
+                this.korpusa = korpus1;
+            }
+        }
+
+        class DT extends Akustika {
+            constructor(type, usilitel, maxpower, korpus, DD, MM, YYYY, summa) {
+                super(type, usilitel, maxpower);
+                this.DDz = DD;
+                this.MMz = MM;
+                this.YYYYz = YYYY;
+                this.summam = summa;
+            }
+            get DD() {
+                return this.DDz;
+            }
+            set DD(DD1) {
+                this.DDz = DD1;
+            }
+            get MM() {
+                return this.MMz;
+            }
+            set MM(MM1) {
+                this.MMz = MM1;
+            }
+            get YYYY() {
+                return this.YYYYz;
+            }
+            set YYYY(YYYY1) {
+                this.YYYYz = YYYY1;
+            }
+            get summa() {
+                return this.summam;
+            }
+            set summa(summa1) {
+                this.summam = summa1;
+            }
+        }
+
+        function Info() {
+            document.write("Тип: " + Pioneer.type);
+            document.write("<br>");
+            document.write("Усилитель: " + Pioneer.usilitel);
+            document.write("<br>");
+            document.write("Максимальная мощность: " + Pioneer.maxpower);
+            document.write("<br>");
+            document.write("Материал корпуса: " + Pioneer.korpus);
+            document.write("<br>");
+            document.write("Дата: " + bibibi.DD + "." + bibibi.MM + "." + bibibi.YYYY);
+            document.write("<br>");
+            document.write("Стоимость: " + bibibi.summa + " Рублей.");
+        }
+
+        var Pioneer = new Akustika("Портативная", "2-х канальный", "20 Вт","Пластик");
+        var bibibi = new DT("Портативная", "2-х канальный", "Термометры","Пластик", 20, 04, 2023, 69900);
+
+        Info();
+
+    </script>
+</body>
+</html>
