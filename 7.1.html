@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Плаксин</title>
+    <meta charset="utf-8">
+</head>
+<body id="body">
+
+    <script>
+        document.write("Описание акустики");
+        document.write("<br>");
+
+        class Akustika {
+            constructor(type, usilitel, maxpower, korpus) {
+                this.typet = type;
+                this.usilitela = usilitel;
+                this.maxpoweri = maxpower;
+                this.korpusa = korpus;
+
+            }
+            get type() {
+                return this.typet;
+            }
+            set type(type1) {
+                this.typet = type1;
+            }
+            get usilitel() {
+                return this.usilitela;
+            }
+            set usilitel(usilitel1) {
+                this.typet = usilitel1;
+            }
+            get maxpower() {
+                return this.maxpoweri;
+            }
+            set maxpower(maxpower1) {
+                this.maxpoweri = maxpower1;
+            }
+            get korpus() {
+                return this.korpusa;
+            }
+            set korpus(korpus1) {
+                this.korpusa = korpus1;
+            }
+        }
+
+        class DT extends Akustika {
+            constructor(type, usilitel, maxpower, korpus, DD, MM, YYYY, summa) {
+                super(type, usilitel, maxpower);
+                this.DDz = DD;
+                this.MMz = MM;
+                this.YYYYz = YYYY;
+                this.summam = summa;
+            }
+            get DD() {
+                return this.DDz;
+            }
+            set DD(DD1) {
+                this.DDz = DD1;
+            }
+            get MM() {
+                return this.MMz;
+            }
+            set MM(MM1) {
+                this.MMz = MM1;
+            }
+            get YYYY() {
+                return this.YYYYz;
+            }
+            set YYYY(YYYY1) {
+                this.YYYYz = YYYY1;
+            }
+            get summa() {
+                return this.summam;
+            }
+            set summa(summa1) {
+                this.summam = summa1;
+            }
+        }
+
+        function Info() {
+            document.write("Тип: " + Pioneer.type);
+            document.write("<br>");
+            document.write("Усилитель: " + Pioneer.usilitel);
+            document.write("<br>");
+            document.write("Максимальная мощность: " + Pioneer.maxpower);
+            document.write("<br>");
+            document.write("Материал корпуса: " + Pioneer.korpus);
+            document.write("<br>");
+            document.write("Дата: " + bibibi.DD + "." + bibibi.MM + "." + bibibi.YYYY);
+            document.write("<br>");
+            document.write("Стоимость: " + bibibi.summa + " Рублей.");
+        }
+
+        var Pioneer = new Akustika("Портативная", "2-х канальный", "20 Вт", "Пластик");
+        var bibibi = new DT("Портативная", "2-х канальный", "Термометры", "Пластик", 20, 04, 2023, 69900);
+
+        Info();
+
+        var table = document.createElement('table');
+        var tbody = document.createElement('tbody');
+
+        table.style.border = '1px solid black';
+        table.style.height = '70px';
+        table.style.width = '';
+        table.appendChild(tbody);
+
+        document.getElementById('body').appendChild(table);
+
+        var cell = document.createElement('tr');
+        var ber = document.createElement('td');
+        var ike = document.createElement('td');
+        var och = document.createElement('td');
+        var durt = document.createElement('td');
+        var bish = document.createElement('td');
+        var alti = document.createElement('td');
+
+
+        ber.id = "1";
+        ber.style.border = '1px solid black';
+
+        ike.id = "2";
+        ike.style.border = '1px solid black';
+
+        och.id = "3";
+        och.style.border = '1px solid black';
+
+        durt.id = "4";
+        durt.style.border = '1px solid black';
+
+        bish.id = "5";
+        bish.style.border = '1px solid black';
+
+        alti.id = "6";
+        alti.style.border = '1px solid black';
+
+        cell.appendChild(ber);
+        cell.appendChild(ike);
+        cell.appendChild(och);
+        cell.appendChild(durt);
+        cell.appendChild(bish);
+        cell.appendChild(alti);
+        tbody.appendChild(cell);
+
+        document.getElementById("1").innerHTML = "Тип: " + Pioneer.type;
+        document.getElementById("2").innerHTML = "Усилитель: " + Pioneer.usilitel;
+        document.getElementById("3").innerHTML = "Максимальная мощность: " + Pioneer.maxpower;
+        document.getElementById("4").innerHTML = "Материал корпуса: " + Pioneer.korpus;
+        document.getElementById("5").innerHTML = "Дата: " + bibibi.DD + "." + bibibi.MM + "." + bibibi.YYYY; 
+        document.getElementById("6").innerHTML = "Стоимость: " + bibibi.summa + " Рублей."; 
+
+    </script>
+</body>
+</html>

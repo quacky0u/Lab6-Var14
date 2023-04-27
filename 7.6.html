@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Плаксин</title>
+    <meta charset="utf-8">
+    <style>
+      .clicable{
+          cursor:pointer;
+      }
+        
+    </style>
+</head>
+<body id="body">
+    <ul id="book-list">
+        <li><h2><a id="0" class="clicable" > Захар Прилепин "Патологии" </a></h2><br/></li>
+        <li><h2><a id="1" class="clicable" > Джордж Оруелл "1986" </a></h2><br/></li>
+        <li><h2><a id="2" class="clicable" > Аркадий и Борис Стругацкие "Пикник на обочине"</a></h2><br/></li>
+        <li><h2><a id="3" class="clicable" > Федор Михайлович Достоевский "Преступление и наказание" </a></h2><br/></li>
+        <li><h2><a id="4" class="clicable" > Михаил Юрьевич Лермонтов "Герой нашего времени"  </a></h2><br/></li>
+        
+    </ul>
+    <script>
+        
+        for (let i = 0; i <= 5; i++) {
+            let a = document.getElementById(i.toString());
+            a.addEventListener("click", function () {
+                if (a.style.color == "orange") {
+                    a.style.color = "black";
+                } else {
+                    a.style.color = "orange";
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>
